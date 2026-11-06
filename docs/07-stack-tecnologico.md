@@ -53,6 +53,8 @@ Control sobre transacciones y consultas de estadísticas; migraciones en SQL rev
 
 Usar las últimas versiones LTS/estables en el momento de crear cada repo y **fijarlas** (`.nvmrc`/`engines`, lockfile, imágenes Docker con tag explícito). Renovate propone actualizaciones.
 
+Notas de la primera implementación: Node 22 LTS; pnpm 12 (`allowBuilds` en `pnpm-workspace.yaml`); **TypeScript 5.9** (typescript-eslint aún no soporta TS 7); **Zod 4** compartido entre contrato, API y app; Fastify 5, React 19, Vite 8, Tailwind 4, Vitest 5. Drizzle ORM no se ha incorporado aún: el API usa SQL explícito con `pg` y se decidirá al escribir las consultas de estadísticas.
+
 ## Convenciones de código
 
 - TypeScript `strict`, sin `any` implícito; ESM.

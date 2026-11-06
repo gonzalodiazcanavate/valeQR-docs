@@ -18,7 +18,7 @@ Cuenta en GitHub: `gonzalodiazcanavate`. Todos los repos son **privados** y se a
 
 > Los nombres de repo conservan el prefijo `valeQR`; el producto se llama **AutoQR**.
 
-> **Distribución del contrato**: `api` y `app` lo declaran como dependencia git fijada por tag (`github:gonzalodiazcanavate/valeQR-contract#vX.Y.Z`); el paquete se compila en su script `prepare`. Evita operar un registro privado. Si más adelante molesta, pasar a GitHub Packages (o a monorepo).
+> **Distribución del contrato**: `api` y `app` lo declaran como dependencia git fijada por tag (`git+ssh://git@github.com/gonzalodiazcanavate/valeQR-contract.git#vX.Y.Z`). `dist/` **va versionado** en el repo del contrato (pnpm no ejecuta scripts de build de dependencias git sin una lista de permitidos ligada al commit) y `zod` es *peerDependency* para compartir una sola copia. Evita operar un registro privado. La CI de `api` y `app` necesita la deploy key `CONTRACT_DEPLOY_KEY`. Si más adelante molesta, pasar a GitHub Packages (o a monorepo).
 
 ```mermaid
 flowchart LR

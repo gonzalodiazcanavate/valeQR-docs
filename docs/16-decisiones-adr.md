@@ -46,6 +46,7 @@ Añade nuevas decisiones al final con ID incremental.
 **Contexto**: roles por organización y riesgo de fuga entre organizaciones.
 **Decisión**: esquema compartido, `organization_id` en cada tabla y RLS con rol de aplicación sin `BYPASSRLS`.
 **Consecuencias**: defensa en profundidad; ligera complejidad en transacciones (fijar `app.org_id`) y en migraciones. Escala bien a cientos de organizaciones; esquemas por tenant se descartan por coste operativo.
+**Implementación**: RLS forzada en las 15 tablas; el login de la app es `NOINHERIT` y la aplicación hace `SET LOCAL ROLE autoqr_app` en cada transacción. Consecuencia operativa: `pg_dump` exige superusuario.
 
 ## ADR-006 — Sesiones opacas en BD
 **Contexto**: necesidad de revocar accesos de inmediato (bajas, robo de móvil, platform admin).

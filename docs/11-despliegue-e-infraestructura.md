@@ -71,7 +71,7 @@ flowchart LR
 | `pg_dump` lógico cifrado (restic) | Diario | Otro proveedor/región | 30 días |
 | Configuración e infra | Cada commit | Repositorio `valeQR-infra` (secretos con sops) | — |
 
-- RPO ≤ 15 min, RTO ≤ 4 h.
+- RPO ≤ 15 min, RTO ≤ 4 h (objetivo). **Estado real**: solo está implementada la copia lógica diaria cifrada con `age` (RPO ≤ 24 h) en `valeQR-infra/scripts/backup.sh`; el WAL continuo con pgBackRest está pendiente. `pg_dump` se ejecuta como superusuario porque la RLS forzada impide volcar con el propietario.
 - **Prueba de restauración trimestral** automatizada en staging (`scripts/restore-test`) con verificación de integridad (conteos e invariantes del [modelo](05-modelo-de-dominio.md)).
 - Claves de cifrado de backups guardadas fuera del VPS.
 

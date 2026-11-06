@@ -35,6 +35,7 @@ Punto de entrada. Cada fila indica qué funcionalidad/tema cubre cada documento.
 | Decisiones de arquitectura (ADR) | [docs/16-decisiones-adr.md](docs/16-decisiones-adr.md) |
 | Riesgos y preguntas abiertas (**leer primero**) | [docs/17-riesgos-y-preguntas-abiertas.md](docs/17-riesgos-y-preguntas-abiertas.md) |
 | Glosario | [docs/18-glosario.md](docs/18-glosario.md) |
+| Estado de implementación y pasos manuales pendientes | [docs/19-estado-de-implementacion.md](docs/19-estado-de-implementacion.md) |
 
 ## Legal (borradores pendientes de revisión por asesor)
 

@@ -8,7 +8,7 @@ Por fases y con criterios de salida (sin estimaciones temporales).
 - Preguntas abiertas de [17](17-riesgos-y-preguntas-abiertas.md) respondidas por el responsable.
 - Salida: documentación aprobada por el responsable.
 
-## Fase 1 — Cimientos técnicos (en curso)
+## Fase 1 — Cimientos técnicos (en curso; ver [19](19-estado-de-implementacion.md))
 
 - Crear repos con `AGENTS.md`, `docs/index.md`, CI, linting y plantillas de PR (**hecho**: repos `valeQR-*` inicializados).
 - `valeQR-contract`: roles, estados, errores, esquemas base.
