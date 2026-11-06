@@ -40,6 +40,7 @@ REST sobre HTTPS, JSON, prefijo `/v1`. Contrato definido con Zod en `valeQR-cont
 | Método | Ruta | Rol mín. |
 |---|---|---|
 | GET/PATCH | `/v1/orgs/{orgId}` | C lectura / A edición |
+| GET | `/v1/orgs/{orgId}/plan` (plan, límites y uso) | A |
 | GET/POST | `/v1/orgs/{orgId}/locations` | C lectura / A creación |
 | PATCH | `/v1/orgs/{orgId}/locations/{id}` | A |
 | PUT | `/v1/orgs/{orgId}/members/{userId}/locations` | A (asignar sedes) |
@@ -95,6 +96,7 @@ REST sobre HTTPS, JSON, prefijo `/v1`. Contrato definido con Zod en `valeQR-cont
 |---|---|
 | GET/POST | `/v1/platform/orgs` · `/v1/platform/org-invitations` |
 | PATCH | `/v1/platform/orgs/{id}` (suspender, reactivar, cerrar) |
+| PATCH | `/v1/platform/orgs/{id}/plan` (cambiar plan; 409 `PLAN_LIMIT_REACHED` si el uso no cabe) |
 | GET/PATCH | `/v1/platform/users` · `/v1/platform/users/{id}` |
 | POST | `/v1/platform/redemptions/{id}/reverse` (motivo) |
 | GET | `/v1/platform/audit` |
@@ -124,6 +126,7 @@ REST sobre HTTPS, JSON, prefijo `/v1`. Contrato definido con Zod en `valeQR-cont
 | `TICKET_WRONG_ORG` | 422 | Ticket de otra organización |
 | `SELF_REDEMPTION_FORBIDDEN` | 403 | Auto-canje |
 | `LAST_ADMIN` | 409 | Operación dejaría la organización sin admin |
+| `PLAN_LIMIT_REACHED` | 409 | Se alcanzó el límite de sedes, empleados o clientes del plan |
 | `INVITATION_INVALID` | 410 | Caducada, usada o revocada |
 | `RATE_LIMITED` | 429 | Demasiadas peticiones |
 | `APP_UPGRADE_REQUIRED` | 426 | Versión de app no soportada |

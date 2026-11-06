@@ -19,6 +19,7 @@ Añade nuevas decisiones al final con ID incremental.
 | ADR-012 | SSE para tiempo real | Propuesta |
 | ADR-013 | Registro solo por invitación; sin registro público | Propuesta |
 | ADR-014 | Canje solo online en el MVP | Propuesta |
+| ADR-015 | Planes por organización con límites; sin cobro en la aplicación | Propuesta |
 
 ---
 
@@ -87,3 +88,7 @@ Añade nuevas decisiones al final con ID incremental.
 ## ADR-014 — Canje solo online
 **Decisión**: el MVP no soporta canje offline.
 **Consecuencias**: evita conflictos y fraude; zonas sin cobertura quedan sin servicio. Revisitar en fase 5 (RF-RDM-08).
+
+## ADR-015 — Planes por organización
+**Decisión**: cada organización tiene un plan (`basic`, `advanced`, `professional`) que limita sedes, empleados y clientes. Catálogo en `valeQR-contract`; la columna `organizations.plan` guarda solo el id. El plan lo asigna la plataforma; la aplicación sigue sin cobrar. Sustituye al criterio previo "sin campo de plan" (RF-PLAT-10 retirado).
+**Consecuencias**: los límites se aplican en servidor con bloqueo de la organización (sin carreras). Cambiar precios o límites exige nueva versión del contrato. Una bajada de plan se rechaza si el uso actual no cabe.

@@ -28,7 +28,7 @@ AutoQR es una plataforma SaaS multi-organización de gestión de vales con QR. E
 
 ## 4. Modelo de ingresos (supuesto)
 
-La aplicación **no gestiona cobros ni facturación**: el responsable cobra a las organizaciones por otra vía, fuera del producto. No hay campos de plan ni pasarela de pago. Los estados de organización (`active`, `suspended`, `closed`) permiten suspender el servicio si procede.
+La aplicación **no gestiona cobros ni facturación**: el responsable cobra a las organizaciones por otra vía, fuera del producto, y no hay pasarela de pago. Cada organización tiene un **plan** (`basic`, `advanced`, `professional`) que limita sedes, empleados y clientes (RF-PLAT-11, ADR-015). Los estados de organización (`active`, `suspended`, `closed`) permiten suspender el servicio si procede.
 
 ## 5. Supuestos
 

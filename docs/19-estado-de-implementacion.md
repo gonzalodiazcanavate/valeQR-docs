@@ -7,8 +7,8 @@ Foto del avance tras la primera pasada de la Fase 1 ([roadmap](15-roadmap.md)). 
 | Repo | Estado | Qué hay | Verificado |
 |---|---|---|---|
 | `valeQR-docs` | Completo (fase 0) | Documentación, legal (borradores), plantillas, marca | — |
-| `valeQR-contract` | v0.1.2 | Roles, estados de ticket, formato de QR (dinámico/estático), códigos de error, esquemas Zod. `dist/` versionado | 16 tests, lint, tipos, build |
-| `valeQR-api` | Esqueleto | Fastify con problem+json, helmet, rate limit, versión mínima de app, health; migración `0001_init` (15 tablas, RLS forzada, libro append-only); `withTenant`; canje atómico e idempotente (repositorio); Dockerfile | 35 tests con PostgreSQL 17 real (aislamiento RLS, append-only, 10 canjes simultáneos → 1), imagen construida y arrancada |
+| `valeQR-contract` | v0.2.0 | Roles, estados de ticket, formato de QR, códigos de error, esquemas Zod, catálogo de planes. `dist/` versionado | 19 tests, lint, tipos, build |
+| `valeQR-api` | Esqueleto | Fastify con problem+json, login/logout/`me` (sesiones opacas, argon2id, CSRF), helmet, rate limit, versión mínima de app, health; migración `0001_init` (15 tablas, RLS forzada, libro append-only); `withTenant`; canje atómico e idempotente (repositorio); Dockerfile | 35 tests con PostgreSQL 17 real (aislamiento RLS, append-only, 10 canjes simultáneos → 1), imagen construida y arrancada |
 | `valeQR-app` | Esqueleto | Vite + React 19 + Tailwind 4, marca, cliente de API, navegación por rol, interfaz de escáner | 13 tests, lint, tipos, build |
 | `valeQR-infra` | Base | Compose dev/prod, roles de BD, Caddy, deploy/rollback, web atómica, backup cifrado (age) y prueba de restauración, workflows, runbooks | Compose y Caddy validados, shellcheck, roles de BD y restauración probados en local. **Nada ejecutado en un VPS** |
 
@@ -16,8 +16,8 @@ Foto del avance tras la primera pasada de la Fase 1 ([roadmap](15-roadmap.md)). 
 
 | Área | Pendiente |
 |---|---|
-| API | Auth (login, sesiones, MFA, invitaciones, términos), módulos orgs/miembros/sedes/tipos de ticket, emisión, firma y verificación de QR, endpoints de canje (preview/confirmar), PDF imprimible, estadísticas, mensajería, notificaciones + SSE, panel de plataforma, reversión, CORS, worker pg-boss, UUID v7 |
-| App | Router, auth, pantallas por rol, escáner nativo (Capacitor), push, deep links, PWA, i18n completa, Playwright |
+| API | Auth (MFA, invitaciones, recuperación, sesiones remotas, términos), módulos orgs/miembros/sedes/tipos de ticket, emisión, firma y verificación de QR, endpoints de canje (preview/confirmar), PDF imprimible, estadísticas, mensajería, notificaciones + SSE, panel de plataforma, reversión, CORS, worker pg-boss, UUID v7 |
+| App | Router, auth (MFA, recuperación, móvil), pantallas por rol, escáner nativo (Capacitor), push, deep links, PWA, i18n completa, Playwright |
 | Infra | Staging, worker, WAL continuo (pgBackRest), monitorización, despliegue automático de la web |
 | Legal | Completar marcadores `[TITULAR]`, `[NIF]`... y revisión por asesor |
 

@@ -31,7 +31,10 @@ Los IDs son estables. Rol mínimo entre paréntesis: C=client, E=employee, A=org
 | RF-PLAT-07 | Consultar auditoría global con filtros | P | M |
 | RF-PLAT-08 | Suplantación de usuario con motivo, límite temporal y auditoría | P | S |
 | RF-PLAT-09 | Panel de salud/uso de la plataforma (nº orgs, usuarios activos, canjes/día) | P | S |
-| RF-PLAT-10 | [RETIRADO] Plan y facturación por organización. La aplicación no gestiona cobros; el responsable los gestiona fuera de ella | P | — |
+| RF-PLAT-10 | [RETIRADO] Plan y facturación por organización. Sustituido por RF-PLAT-11 y RF-PLAT-12; la aplicación sigue sin gestionar cobros | P | — |
+| RF-PLAT-11 | Plan por organización (`basic`, `advanced`, `professional`) con límites de sedes, empleados y clientes: 1/10/50 (9,99 €/mes), 3/30/200 (16,99 €/mes), 10/100/800 (34,99 €/mes). Por defecto `basic` | P | M |
+| RF-PLAT-12 | Cambiar el plan de una organización (con auditoría). Una bajada se rechaza si el uso actual supera los límites del nuevo plan | P | M |
+| RF-ORG-11 | Ver el plan, sus límites y el uso actual; las altas de sedes, empleados y clientes que superen el límite se rechazan con `PLAN_LIMIT_REACHED` | A | M |
 
 ## ORG — Gestión de organización
 

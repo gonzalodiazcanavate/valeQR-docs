@@ -34,7 +34,7 @@ erDiagram
 | Tabla | Campos principales | Notas |
 |---|---|---|
 | `users` | `id`, `email` (citext, único), `password_hash` (argon2id), `name`, `phone`, `locale`, `avatar_key`, `is_platform_admin`, `email_verified_at`, `mfa_secret_enc`, `status` (`active`/`blocked`/`deleted`), `created_at`, `deleted_at` | Un único usuario global por email |
-| `organizations` | `id`, `name`, `slug` (único), `legal_name`, `tax_id`, `vertical`, `timezone`, `status` (`active`/`suspended`/`closed`), `settings` (jsonb), `created_at` | `vertical` = `driving_school` inicialmente. Sin campo de plan: la facturación queda fuera de la aplicación |
+| `organizations` | `id`, `name`, `slug` (único), `legal_name`, `tax_id`, `vertical`, `timezone`, `status` (`active`/`suspended`/`closed`), `plan`, `settings` (jsonb), `created_at` | `vertical` = `driving_school` inicialmente. `plan` (`basic`/`advanced`/`professional`, por defecto `basic`) fija los límites de sedes, empleados y clientes (ver RF-PLAT-11); solo lo modifica la plataforma. La facturación queda fuera de la aplicación |
 | `locations` | `id`, `organization_id`, `name`, `address`, `active`, `created_at` | Sedes. Toda organización tiene al menos una (se crea una por defecto). Atributo, no límite de permisos |
 | `membership_locations` | `membership_id`, `location_id` | Sedes asignadas a un empleado/`org_admin` |
 | `terms_acceptances` | `id`, `user_id`, `document` (`terms`/`privacy`), `version`, `accepted_at`, `ip` | Se vuelve a pedir si cambia la versión (RF-AUTH-10) |

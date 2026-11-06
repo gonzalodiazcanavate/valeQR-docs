@@ -13,7 +13,7 @@
 | 7 | Posible menores como clientes | Se descartan menores de 14 años (términos de uso); no se recoge fecha de nacimiento |
 | 8 | El "derecho al olvido" choca con un libro inmutable | Anonimización del usuario conservando el libro (base legal: interés legítimo/obligación de auditoría) |
 | 9 | No se menciona alta de cuenta para stores | Apple exige poder borrar la cuenta desde la app; se incluye (RF-AUTH-09) |
-| 10 | No se especifica facturación | Fuera de la aplicación por decisión del responsable |
+| 10 | No se especifica facturación (sólo planes con límites) | Fuera de la aplicación por decisión del responsable |
 | 11 | Baja de un cliente con tickets activos | Los tickets se conservan; quedan bloqueados mientras no haya membership activa; reactivables |
 | 12 | Falta canal de soporte/contacto con el desarrollador | Se añade email de soporte y política de incidencias (ver preguntas abiertas) |
 

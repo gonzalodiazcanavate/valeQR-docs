@@ -35,7 +35,7 @@ El código y el modelo de datos son **genéricos** (`organization`, `client`, `e
 
 ### Fuera del MVP (ver [roadmap](15-roadmap.md))
 
-- Cobros y facturación: la aplicación **no** gestiona ningún tipo de cobro; el responsable los gestiona por otra vía.
+- Cobros y facturación: la aplicación **no** gestiona ningún tipo de cobro; el responsable los gestiona por otra vía. Sí existen planes con límites (RF-PLAT-11).
 - Canje offline.
 - Passkeys, wallets (Apple/Google Wallet).
 - Catálogo avanzado de tipos de ticket y caducidades complejas.

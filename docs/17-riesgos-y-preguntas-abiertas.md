@@ -8,7 +8,7 @@
 | Q2 | ¿Tickets impresos? | Sí: se pueden imprimir y escanear el QR desde el impreso | QR estático revocable, PDF imprimible: RF-TKT-10..12, RF-RDM-10, ADR-007 |
 | Q3 | ¿Tipos de ticket? | Un ticket = una clase; la organización define nombre, utilidad y metadatos | Tipos y metadatos pasan a MVP: RF-TKT-07, `ticket_types.metadata` |
 | Q4 | Caducidad | Solo si la organización fija una fecha | RF-TKT-13; `expires_at` nullable |
-| Q5 | Cobro | La aplicación no cobra nada; lo gestiona el responsable por otra vía | RF-PLAT-10 [RETIRADO]; sin `plan` en el modelo |
+| Q5 | Cobro | La aplicación no cobra nada; lo gestiona el responsable por otra vía | RF-PLAT-10 [RETIRADO]; planes con límites sin cobro en la app (RF-PLAT-11, ADR-015) |
 | Q6 | Menores de 14 años | No | Términos exigen ≥ 14 años; riesgo R7 reducido |
 | Q7 | `org_admin` que canjea; varios admins | Sí a ambos | Regla 8 de [02](02-usuarios-y-roles.md) |
 | Q8 | Reclamaciones sobre un canje | El cliente reclama al `org_admin`, que decide | RF-MSG-04; la reversión sigue siendo solo del admin de plataforma |
